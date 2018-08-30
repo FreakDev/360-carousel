@@ -1,0 +1,69 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    opacity: 0.5;
+    background-color: black;
+    background-image: url('../assets/loader/ajax-loader.gif');
+    background-repeat: no-repeat;
+    background-position: center center
+}
+
+.hide {
+    display: none;
+}
+
+.btn {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    opacity: 0;
+    background-color: black;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.btn:after, .btn:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 10px;
+    border-radius: 5px;
+    display: block;
+    background: white;
+}
+
+.btn:hover {
+    opacity: 0.3;
+
+    background-repeat: no-repeat;
+    background-position: center center
+}
+
+.btn--previous {
+    left: 0;
+}
+
+.btn--previous:before {
+    transform: rotateZ(-45deg)
+}
+.btn--previous:after {
+    transform: translateY(30px) rotateZ(45deg)
+}
+
+.btn--next {
+    right: 0;
+}
+
+.btn--next:before {
+    transform: translateY(30px) rotateZ(-45deg)
+}
+.btn--next:after {
+    transform: rotateZ(45deg)
+}
