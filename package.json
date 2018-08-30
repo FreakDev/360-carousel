@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run build && node server.js",
+    "build": "node_modules/.bin/browserify -e src/index.js -o dist/js/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -12,6 +14,7 @@
     "browserify": "^16.2.2"
   },
   "dependencies": {
-    "aframe": "^0.8.2"
+    "aframe": "^0.8.2",
+    "node-static-auth": "^1.0.6"
   }
 }
